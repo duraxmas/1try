@@ -6,8 +6,10 @@ body {
 	font-size: 14;
 	line-height: 1;
 	height: 100%;
-	
+
 }
+
+/* @media */
 
 a {
 	text-decoration: none;
@@ -37,6 +39,7 @@ li {
 ._ibg {
 	position: relative;
 }
+
 ._ibg img {
 	position: absolute;
 	width: 100%;
@@ -45,6 +48,7 @@ li {
 	left: 0;
 	object-fit: cover;
 }
+
 /* ____________HEEEEEEEEEEEEEEEEEEEEEADER___________________ */
 .header {
 	position: absolute;
@@ -107,26 +111,35 @@ li {
 .page {
 	/* background-color: rgb(189, 182, 182); */
 	flex: 1 1 auto;
-	
+
 }
 
-.page__main-block{}
+.page__main-block {}
+
+.page__advantages {}
 
 /* ____________MAIN_________________________________________________________________ */
-.main-block{
+.main-block {
 	position: relative;
 }
-.main-block__container{}
 
-._container{}
+.main-block__container {}
 
-.main-block__body{
+._container {}
+
+.main-block__body {
 	padding: 154px 0px 53px 0px;
 	position: relative;
 	z-index: 2;
-	max-width: 599px;
+	max-width: 400px;
 }
-.main-block__title{
+
+/* отступы в мейне для всех 1 уровня объектов потому чтио там одинаковые маргины*/
+.main-block__body>*:not(:last-child) {
+	margin: 0px 0px 35px 0px;
+}
+
+.main-block__title {
 	font-weight: 800;
 	font-size: 58px;
 	line-height: calc(80 / 58 * 100%);
@@ -134,7 +147,7 @@ li {
 	color: #fff;
 }
 
-.main-block__text{
+.main-block__text {
 	font-weight: 500;
 	font-size: 20px;
 	line-height: calc(30/20*100%);
@@ -142,13 +155,33 @@ li {
 	color: #fff;
 }
 
-.main-block__buttons{}
+.main-block__buttons {
+	display: inline-flex;
+}
 
-.main-block__button{}
+.main-block__button {
+	border-radius: 37px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 15px 36px;
+	color: #fff;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: calc(22/14*100%);
+	letter-spacing: 0.2px;
+	margin: 5px;
+}
 
-.main-block__button_border{}
+.main-block__button_border {
+	border: 1px solid #fff;
+}
 
-.main-block__image{
+.main-block__button_blue {
+	background: #23A6F0;
+}
+
+.main-block__image {
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -157,9 +190,145 @@ li {
 
 }
 
+@media (max-width: 900px) {
+	.main-block__image img {
+		object-position: left;
+	}
+}
+
+
+
+.advantages {}
+
+.advantages__container {}
+
+._container {}
+
+.advantages__body {
+	display: flex;
+	flex-direction: column;
+	margin: 0px -15px;
+	align-items: center;
+	max-width: 1050px;
+	max-height: 828px;
+}
+
+.advantages__mid-row {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	max-width: 693px;
+	max-height: 107px;
+	margin: 112px 0px;
+
+}
+
+.advantages_mid {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 676px;
+	max-height: 107px;
+
+
+}
+
+.advanatages_title {
+	font-weight: 700;
+	font-size: 40px;
+	line-height: calc(57/40*100%);
+	letter-spacing: 0.2px;
+	margin: 0px 0px 10px 0px;
+}
+
+.advantages_text {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: calc(20/14*100%);
+	letter-spacing: 0.2px;
+	color: #737373;
+	max-width: 470px;
+	max-height: 40px;
+
+}
+
+.advanatges_column {
+	padding: 0px 15px;
+	flex: 0 1 33.33%;
+	padding: 0px 0px 112px 0px;
+}
+
+.advantages_item {}
+
+.item-advantages {}
+
+.advantages_top-row {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 30px 50px;
+	max-height: 132px;
+	max-width: 334px;
+	box-sizing: border-box;
+	align-self: center;
+	background: #8EC2F2;
+}
+
+.item-advantages__icon img {
+	align-self: center;
+
+}
+
+.item-advantages__icon {
+	/* background-color: rgb(184, 172, 172); */
+	border: 1px solid white;
+	border-radius: 100%;
+	padding: 26px;
+	margin-right: 15px;
+	background: white;
+}
+
+.item-advantages__title {
+	font-weight: 700;
+	color: #fff;
+	font-size: 16px;
+	line-height: calc(24/16*100%);
+	letter-spacing: 0.1px;
+	max-width: 147px;
+	max-height: 24px;
+	white-space: nowrap;
+}
+
+.item-advantages__text {
+	border: 1px solid #A9D6FF;
+	max-width: 334px;
+	max-height: 253px;
+}
+
+.advantages-list {
+	padding: 30px 50px;
+}
+
+.advantages-item-h6 {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: calc(24/14*100%);
+	margin: 0px 0px 2.5px 0px;
+	color: #737373;
+	letter-spacing: 0.2px;
+}
+
+.item-advantages__link {
+	color: #23A6F0;
+
+
+}
+
+
+
 
 /* ____________FOOOOOOOOOOOOOTER_________________________________________________________________ */
 .footer {
 	border: 1px solid;
-	
+
 }
