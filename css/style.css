@@ -67,6 +67,42 @@ li {
 	min-height: 104px;
 	display: flex;
 	align-items: center;
+	max-width: 1050px;
+}
+
+
+.header_btn-que {
+	display: flex;
+	align-items: center;
+	padding: 15px 0px 15px 25px;
+	width: 192px;
+	height: 52px;
+	margin: 0px 15px 0px 0px;
+}
+
+.header_btn-que img {
+	padding: 0px 15px 0px 0px;
+
+}
+
+.square-btn-blue {
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	border: #23A6F0;
+	border-radius: 5px;
+	padding: 0px;
+	background-color: #23A6F0;
+}
+
+.square-btn-blue a {
+	color: #fff;
+	font-weight: 700;
+	font-size: 14px;
+	line-height: calc(22/14*100%);
+	letter-spacing: 0.2px;
 }
 
 .header_logo {
@@ -78,9 +114,26 @@ li {
 }
 
 .header_menu {
-	margin: 0px 0px 0px 105px;
+	margin: 0px 343px 0px 105px;
 }
 
+@media (max-width:1055px) {
+	.header_menu {
+		margin: 0px 243px 0px 105px;
+	}
+}
+
+@media (max-width:952px) {
+	.header_menu {
+		margin: 0px 153px 0px 105px;
+	}
+}
+
+@media (max-width:860px) {
+	.header_menu {
+		margin: 0px 53px 0px 105px;
+	}
+}
 
 .menu {
 	padding: 0 5px;
@@ -89,7 +142,16 @@ li {
 
 .menu_list {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	/* margin: 0px 345px 0px 0px; */
+	padding: 0;
+}
+
+@media (max-width:790px) {
+	.menu_list {
+		flex-wrap: wrap;
+	}
 }
 
 .menu_item {}
@@ -117,6 +179,60 @@ li {
 .page__main-block {}
 
 .page__advantages {}
+
+.page__testimonials {
+	background: #FAFAFA;
+}
+
+.page__faq {
+	background: #FAFAFA;
+
+}
+
+
+/* +++++++++++++++++++++++++all around+++++++++++++++++++ */
+.title_h2 {
+	font-weight: 700;
+	font-size: 40px;
+	line-height: calc(57/40*100%);
+	letter-spacing: 0.2px;
+	margin: 0px 0px 10px 0px;
+	max-width: 376px;
+	max-height: 57px;
+	text-align: center;
+}
+
+.text_h2 {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: calc(20/14*100%);
+	letter-spacing: 0.2px;
+	color: #737373;
+	max-width: 470px;
+	max-height: 40px;
+	text-align: center;
+
+}
+
+.text_h5 {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: calc(24/16*100%);
+	color: #252B42;
+	letter-spacing: 0.1px;
+}
+
+.text_h6 {
+
+	font-weight: 600;
+	font-size: 14px;
+	line-height: calc(24/14*100%);
+	color: #737373;
+	letter-spacing: 0.2px;
+
+}
+
+
 
 /* ____________MAIN_________________________________________________________________ */
 .main-block {
@@ -196,21 +312,24 @@ li {
 	}
 }
 
-
+/* --------------------------ADVANTAGES------------------------------------- */
 
 .advantages {}
 
-.advantages__container {}
-
-._container {}
-
-.advantages__body {
+.advantages__container {
 	display: flex;
 	flex-direction: column;
-	margin: 0px -15px;
 	align-items: center;
 	max-width: 1050px;
 	max-height: 828px;
+}
+
+
+.advantages__body {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
 }
 
 .advantages__mid-row {
@@ -233,32 +352,26 @@ li {
 
 }
 
-.advanatages_title {
-	font-weight: 700;
-	font-size: 40px;
-	line-height: calc(57/40*100%);
-	letter-spacing: 0.2px;
-	margin: 0px 0px 10px 0px;
-}
+.advanatages_title {}
 
-.advantages_text {
-	font-weight: 500;
-	font-size: 14px;
-	line-height: calc(20/14*100%);
-	letter-spacing: 0.2px;
-	color: #737373;
-	max-width: 470px;
-	max-height: 40px;
+.advantages_text {}
 
-}
+
 
 .advanatges_column {
+	display: flex;
+	flex-direction: column;
 	padding: 0px 15px;
 	flex: 0 1 33.33%;
 	padding: 0px 0px 112px 0px;
+	margin: 0px 15px;
 }
 
-.advantages_item {}
+.advantages_item {
+	background: linear-gradient(to bottom, transparent 10%, #89c7fd 60%, transparent 70%);
+	display: flex;
+	flex-direction: column;
+}
 
 .item-advantages {}
 
@@ -267,16 +380,16 @@ li {
 	flex-direction: row;
 	align-items: center;
 	padding: 30px 50px;
-	max-height: 132px;
-	max-width: 334px;
+	height: 132px;
+	width: 326px;
 	box-sizing: border-box;
 	align-self: center;
 	background: #8EC2F2;
+	border-radius: 10px 10px 0px 0px;
 }
 
 .item-advantages__icon img {
 	align-self: center;
-
 }
 
 .item-advantages__icon {
@@ -303,32 +416,170 @@ li {
 	border: 1px solid #A9D6FF;
 	max-width: 334px;
 	max-height: 253px;
+	border-radius: 10px 10px 10px 10px;
+	background: #fff;
 }
 
 .advantages-list {
 	padding: 30px 50px;
+
 }
 
-.advantages-item-h6 {
-	font-weight: 600;
-	font-size: 14px;
-	line-height: calc(24/14*100%);
-	margin: 0px 0px 2.5px 0px;
-	color: #737373;
-	letter-spacing: 0.2px;
+.advantages-item-h6 {}
+
+.advantages-item-h6:not(:last-child) {
+	margin: 0px 0px 5px 0px;
 }
 
 .item-advantages__link {
 	color: #23A6F0;
-
+	margin: 0px 0px 0px 0px;
 
 }
 
 
 
 
+/* ____________TESTIMONIALS________________________________________________________________ */
+
+.testimonials {}
+
+.testimonials__container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.testimonials__mid-row {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin: 112px 0px 80px 0px;
+}
+
+.testimonials_title {}
+
+.testimonials_text {}
+
+.testimonials__body {
+	display: flex;
+}
+
+.testimonials__column {
+	display: flex;
+	flex-direction: column;
+	max-width: 330px;
+	max-height: 244px;
+	flex: 0 1 33.33%;
+	margin: 0px 0px 112px 0px;
+
+}
+
+.testimonials__column:not(:last-child) {
+	margin: 0px 30px 0px 0px;
+}
+
+.testimonials-item {
+	padding: 30px 35px;
+	border-radius: 5px;
+	border: 1px solid #DEDEDE;
+	background-color: #fff;
+}
+
+.item-testimonials {}
+
+.testimonials__stars {}
+
+.testimonials__stars img {
+	margin: 0px 0px 20px 0px;
+}
+
+.testimonials_p-text {}
+
+.testimonials-img {}
+
+.testimonials-img img {
+	max-width: 50px;
+	max-height: 50px;
+	margin: 20px 0px 0px 0px;
+}
+
+
+/* ____________FAAAAAAAAAAQ_________________________________________________________________ */
+
+.faq {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.faq__container {
+	display: flex;
+	flex-direction: column;
+	max-width: 1059px;
+	max-height: 920px;
+
+}
+
+.faq__mid-row {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: 1050px;
+	max-height: 197px;
+	padding: 45px 0px;
+
+}
+
+.faq__title {}
+
+.faq__text {}
+
+.faq__body {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 50px 0px 50px 0px;
+
+}
+
+.faq__column {
+	display: flex;
+	flex-direction: row;
+	flex: 1 0 33.33%;
+}
+
+.faq-item {
+	display: flex;
+	flex-direction: row;
+	max-width: 333px;
+	max-height: 151px;
+	padding: 25px 28px;
+	border-radius: 9px;
+	background-color: #fff;
+	margin: 0px 30px 30px 0px;
+}
+
+.item-faq {}
+
+.faq_img {}
+
+.faq_flex-row {
+	margin: 0px 20px;
+	max-width: 248px;
+	max-height: 101px;
+}
+
+.faq_title {}
+
+.faq_text {}
+
+/* ____________PRICING_________________________________________________________________ */
+
 /* ____________FOOOOOOOOOOOOOTER_________________________________________________________________ */
 .footer {
 	border: 1px solid;
-
 }
