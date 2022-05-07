@@ -80,7 +80,7 @@ li {
 	background-color: #23A6F0;
 }
 
-.btn-que__row{
+.btn-que__row {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -88,7 +88,7 @@ li {
 	padding: 15px 25px;
 }
 
-.btn-que__row a{
+.btn-que__row a {
 	margin: 0px 15px 0px 0px;
 	color: #FAFAFA;
 	font-weight: 700;
@@ -97,13 +97,13 @@ li {
 	letter-spacing: 0.2px;
 }
 
-.header_btn-que:hover{
+.header_btn-que:hover {
 	background-color: #fff;
 	cursor: pointer;
 }
 
-.header_btn-que:hover a{
-	color:#23A6F0 ;
+.header_btn-que:hover a {
+	color: #23A6F0;
 }
 
 
@@ -252,11 +252,18 @@ li {
 
 ._container {}
 
-.main-block__body {
+.main-block__row {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 	padding: 154px 0px 53px 0px;
+}
+
+.main-block__body {
+	padding: 134px 0px 134px 0px;
 	position: relative;
 	z-index: 2;
-	max-width: 400px;
+	max-width: 599px;
 }
 
 /* отступы в мейне для всех 1 уровня объектов потому чтио там одинаковые маргины*/
@@ -323,7 +330,7 @@ li {
 	height: 100%;
 	top: 0;
 	left: 0;
-
+	z-index: -1;
 }
 
 @media (max-width: 900px) {
@@ -331,6 +338,70 @@ li {
 		object-position: left;
 	}
 }
+
+.main-block__booking {}
+
+.booking {}
+
+.booking__block {
+	background-color: #fff;
+	padding: 40px;
+}
+
+.item-booking {
+	border-radius: 10px;
+}
+
+.item-booking__title {
+	text-align: center;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: calc(32/24*100%);
+	letter-spacing: 0.1px;
+}
+
+.item-booking__form {
+	margin: 40px 0px;
+}
+
+.form-booking {}
+
+.form-booking__paragraph {
+	color: #252B42;
+	margin: 0px 0px 10px 0px;
+}
+
+.all-forms {
+	background: #F9F9F9;
+	border: 1px solid #E6E6E6;
+	border-radius: 5px;
+	padding: 11px 21px;
+}
+
+.all-forms:not(:last-child) {
+	margin: 0px 0px 10px 0px;
+}
+
+
+.form-booking__name {}
+
+.form-booking__email {}
+
+.form-booking__department {
+	width: 100%;
+}
+
+.form-booking__department_selected {}
+
+.form-booking__time {
+	width: 100%;
+}
+
+.form-booking__time_selected p {
+	color: #737373;
+}
+
+.booking__btn {}
 
 /* --------------------------ADVANTAGES------------------------------------- */
 
@@ -728,6 +799,7 @@ li {
 	color: #fff;
 	box-sizing: border-box;
 }
+
 .pricing__button:hover {
 	background: #fff;
 	color: #23A6F0;
@@ -737,25 +809,26 @@ li {
 
 /* ------------------------------------------GETINTOUCH------------------------------------ */
 
-.getintouch {
-}
-.getintouch__container {
-}
+.getintouch {}
+
+.getintouch__container {}
 
 .getintouch__body {
 	display: flex;
 	justify-content: space-between;
 	padding: 80px 0px;
 }
-.getintouch__column {
-}
-.getintouch__item {
-}
+
+.getintouch__column {}
+
+.getintouch__item {}
+
 .item-getintouch {
 	flex: 0 1 50%;
 }
+
 .item-getintouch__title {
-	
+
 	color: #fff;
 	text-align: left;
 	margin: 0;
@@ -773,6 +846,7 @@ li {
 	align-items: center;
 	text-align: center;
 }
+
 .getintouch__input {
 	width: 100%;
 	flex: 1 1 auto;
@@ -784,6 +858,7 @@ li {
 	border: 1px solid #E6E6E6;
 	border-right: 0px;
 }
+
 .getintouch__button {
 	background: #23A6F0;
 	border: 1px solid #E6E6E6;
@@ -801,7 +876,88 @@ li {
 	padding: 15px 22.5px;
 	box-sizing: border-box;
 }
+
 /* ____________FOOOOOOOOOOOOOTER_________________________________________________________________ */
-.footer {
-	border: 1px solid;
+.footer {}
+
+.footer__body {
+	background-color: #fff;
 }
+
+.footer__main {
+	padding: 80px 0px;
+}
+
+.footer__main-row {
+	display: flex;
+	flex-direction: row;
+}
+
+.column-getintouch {}
+
+.column-getintouch__subtitle {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: calc(20/14*100%);
+	letter-spacing: 0.2px;
+	color: #737373;
+	margin: 25px 0px;
+}
+
+.column-getintouch__social-media {}
+
+.social-media {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+}
+
+.social-media__item {}
+
+.social-media__item:not(:last-child) {
+	margin-right: 20px;
+}
+
+.footer__column {
+	flex: 0 1 25%;
+}
+
+.footer__column:not(:last-child) {
+	margin: 0px 30px 0px 0px;
+}
+
+.footer__column-title {
+	font-weight: 700;
+	font-size: 24px;
+	line-height: calc(32/24*100%);
+	letter-spacing: 0.1px;
+	color: #252B42;
+}
+
+.footer__column-nav {}
+
+.nav-footer {}
+
+.nav-footer__list {
+	margin: 20px 0px 0px 0px;
+	padding: 0px;
+}
+
+.nav-footer__item {}
+
+.nav-footer__item:not(:last-child) {
+	margin: 0px 0px 10px 0px;
+}
+
+.nav-footer__link {}
+
+.footer__bottom {
+	background-color: #FAFAFA;
+}
+
+.footer__container {
+	text-align: center;
+	padding: 25px 0px;
+}
+
+.footer__madeby {}
