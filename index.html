@@ -40,7 +40,26 @@
 				<div class="header_btn-que">
 					<div class="btn-que__row">
 						<a href="">Get Quote Now</a>
-						<img src="img/header/arrrowh.svg" alt="arrow">
+						<img class="img-svg" src="img/header/arrrowh.svg" alt="arrow">
+						<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+						<script>
+							$('img.img-svg').each(function () {
+								var $img = $(this);
+								var imgClass = $img.attr('class');
+								var imgURL = $img.attr('src');
+								$.get(imgURL, function (data) {
+									var $svg = $(data).find('svg');
+									if (typeof imgClass !== 'undefined') {
+										$svg = $svg.attr('class', imgClass + ' replaced-svg');
+									}
+									$svg = $svg.removeAttr('xmlns:a');
+									if (!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+										$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+									}
+									$img.replaceWith($svg);
+								}, 'xml');
+							});
+						</script>
 					</div>
 				</div>
 
@@ -67,30 +86,41 @@
 							<div class="booking__block item-booking">
 								<div class="item-booking__title">Book Appointment</div>
 								<form action="#" class="item-booking__form form-booking">
-									<p class="form-booking__paragraph text_h6">Name*</p>
-									<input type="text" name="username" placeholder="Full name*" 
-									class="form-booking__name all-forms">
-									<p class="form-booking__paragraph text_h6">Email adress*</p>
-									<input type="text" name="email" placeholder="example@gmail.com" 
-									class="form-booking__email all-forms">
-									<p class="form-booking__paragraph text_h6">Department*</p>
-									<select  name="department" class="form-booking__department all-forms">
-										<option class="form-booking__department_selected" selected disabled hidden value="selected">
-											Please select
-										</option>
-										<option value="school">School</option>
-										<option value="university">University</option>
-										<option value="jobless">jobless</option>
-									</select>
-									<p class="form-booking__paragraph text_h6">Time*</p>
-									<select name="time" class="form-booking__time all-forms">
-										<option class="form-booking__time_selected" selected disabled hidden value="selected">
-											<p>4:00 Available</p>
-										</option>
-										<option value="4">4:00</option>
-										<option value="5">5:00</option>
-										<option value="6">6:00</option>
-									</select>
+									<p class="form-booking__paragraph text_h6">Name *</p>
+									<input type="text" name="username" placeholder="Full name*"
+										class="form-booking__name all-forms">
+									<p class="form-booking__paragraph text_h6">Email adress *</p>
+									<input type="text" name="email" placeholder="example@gmail.com"
+										class="form-booking__email all-forms">
+									<div class="form-booking__department-block">
+										<p class="form-booking__paragraph text_h6">Department *</p>
+										<select name="department" class="form-booking__department all-forms"
+											onchange="this.setAttribute('data-selected', true)">
+											<option class="form-booking__department_selected" selected disabled hidden
+												value="selected">
+												Please select
+											</option>
+											<option value="school">School</option>
+											<option value="university">University</option>
+											<option value="jobless">jobless</option>
+										</select>
+										<img class="form-booking__arrow" src="img/mainblock/selector-arrow.svg"
+											alt="selector arrow">
+									</div>
+									<div class="form-booking-time-block">
+										<p class="form-booking__paragraph text_h6">Time *</p>
+										<select name="time" class="form-booking__time all-forms"
+											onchange="this.setAttribute('data-selected', true)">
+											<option class="form-booking__time_selected" selected disabled hidden value="selected">
+												<p class=>4:00 Available</p>
+											</option>
+											<option value="4">4:00</option>
+											<option value="5">5:00</option>
+											<option value="6">6:00</option>
+										</select>
+										<img class="form-booking__arrow" src="img/mainblock/selector-arrow.svg"
+											alt="selector arrow">
+									</div>
 								</form>
 								<div class="booking__btn">Book Appointment</div>
 							</div>
@@ -723,7 +753,7 @@
 	</div>
 	</footer>
 	</div>
-	<script src="js/script.js"></script>
-</body>
+	<script src="js/script.js"></scrip >
+</body >
 
-</html>
+</html >

@@ -86,6 +86,9 @@ li {
 	align-items: center;
 	justify-content: center;
 	padding: 15px 25px;
+	border-radius: 5px;
+	border: 1px solid #23A6F0;
+	box-sizing: border-box;
 }
 
 .btn-que__row a {
@@ -97,13 +100,18 @@ li {
 	letter-spacing: 0.2px;
 }
 
-.header_btn-que:hover {
+.btn-que__row:hover {
 	background-color: #fff;
 	cursor: pointer;
+
 }
 
-.header_btn-que:hover a {
+.btn-que__row:hover a {
 	color: #23A6F0;
+}
+
+.btn-que__row:hover .img-svg path{
+	fill: #23A6F0;
 }
 
 
@@ -387,21 +395,75 @@ li {
 
 .form-booking__email {}
 
+
+.form-booking__department-block{
+position: relative;
+}
 .form-booking__department {
+	appearance: none;
+	color: #737373;
 	width: 100%;
+	/* background: url(img/mainblock/selector-arrow.svg) no-repeat right; */
+	/* background-position-x: calc(100% - 8px); */
 }
 
-.form-booking__department_selected {}
+.form-booking__arrow{
+	position: absolute;
+	z-index: 10;
+	right: 25px;
+	top: 50px;
+}
+.form-booking__selector1-block{
 
-.form-booking__time {
-	width: 100%;
 }
 
-.form-booking__time_selected p {
+.form-booking__department_selected {
 	color: #737373;
 }
 
-.booking__btn {}
+.form-booking-time-block{
+	position: relative;
+}
+
+.form-booking__time {
+	appearance: none;
+	color: #737373;
+	width: 100%;
+}
+
+.form-booking__time_selected {
+}
+
+
+[data-selected] {
+	color: #000;
+}
+
+option {
+	color: #000;
+}
+
+.booking__btn {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 15px 52px;
+	background: #23A6F0;
+	border-radius: 5px;
+	color: #fff;
+	font-weight: 700;
+	letter-spacing: 0.2px;
+	font-size: 14px;
+	line-height: calc(24/14*100%);
+	border: 1px solid #23A6F0;
+	box-sizing: border-box;
+}
+
+.booking__btn:hover {
+	background: #fff;
+	color: #23A6F0;
+	cursor: pointer;
+}
 
 /* --------------------------ADVANTAGES------------------------------------- */
 
@@ -526,6 +588,10 @@ li {
 
 }
 
+.item-advantages__link:hover {
+text-decoration: underline;
+}
+
 
 
 
@@ -623,7 +689,12 @@ li {
 
 }
 
-.faq__title {}
+.faq__title {
+	
+}
+
+
+
 
 .faq__text {}
 
@@ -663,6 +734,11 @@ li {
 }
 
 .faq_title {}
+
+.faq_title:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
 
 .faq_text {}
 
@@ -877,6 +953,10 @@ li {
 	box-sizing: border-box;
 }
 
+.getintouch__button:hover {
+	background: #12608d;
+}
+
 /* ____________FOOOOOOOOOOOOOTER_________________________________________________________________ */
 .footer {}
 
@@ -950,6 +1030,10 @@ li {
 }
 
 .nav-footer__link {}
+
+.nav-footer__link:hover {
+text-decoration: underline;
+}
 
 .footer__bottom {
 	background-color: #FAFAFA;
